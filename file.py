@@ -1,8 +1,7 @@
-file = open('file.txt','w')
-file.write("hello,iam from deepcompute")
-file.close()
-file = open('file.txt', 'r')
-for line in file:
-    words = line.split(' ')
-    print(words[-1])
-file.close()
+with open("file.txt", "w") as f:
+	f.write("hello,iam from deepcompute")
+with open("file.txt", "r") as file:
+	data = file.readlines()
+	for line in data:
+        word = line.split()
+		print (word[-1])
